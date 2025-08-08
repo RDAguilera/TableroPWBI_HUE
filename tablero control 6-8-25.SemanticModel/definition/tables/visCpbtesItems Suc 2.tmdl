@@ -1,0 +1,180 @@
+table 'visCpbtesItems Suc 2'
+	lineageTag: d0ce45d5-cf6c-4455-8727-868c2693377a
+
+	measure 'Importe Venta Suc 2' = CALCULATE(SUM('visCpbtesItems Suc 2'[Importe]),'visCpbtesItems Suc 2'[Id_TipoComprobante]="PREVEN")
+		lineageTag: 26e17943-e254-492c-96ef-d0a952cd2555
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Cantidad Venta Suc 2' = CALCULATE(SUM('visCpbtesItems Suc 2'[Cantidad2]),'visCpbtesItems Suc 2'[Id_TipoComprobante]="PREVEN")
+		formatString: 0
+		lineageTag: 134f2d72-c765-4129-b891-d66578b113fe
+
+	column Id_Comprobante
+		dataType: int64
+		formatString: 0
+		lineageTag: 82442dd2-d7ca-46cc-af9a-4a64c1aace06
+		summarizeBy: none
+		sourceColumn: Id_Comprobante
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Producto
+		dataType: int64
+		formatString: 0
+		lineageTag: 6bcde42c-1a5f-4e1b-8911-6acc5ade1108
+		summarizeBy: none
+		sourceColumn: Id_Producto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Concepto
+		dataType: int64
+		formatString: 0
+		lineageTag: 69ab1533-ef58-48ac-b44d-8c18f5d72a55
+		summarizeBy: sum
+		sourceColumn: Id_Concepto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descripcion
+		dataType: string
+		lineageTag: 3034d6be-0e14-4f57-b6b3-0a3d63afc521
+		summarizeBy: none
+		sourceColumn: Descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cantidad
+		dataType: double
+		lineageTag: 5d73edbb-a02a-49e0-bd26-4105cacc036d
+		summarizeBy: sum
+		sourceColumn: Cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Cantidad2
+		dataType: int64
+		formatString: 0
+		lineageTag: 380663e6-b903-491b-a58f-9261330566b6
+		summarizeBy: sum
+		sourceColumn: Cantidad2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Importe_Neto
+		dataType: double
+		lineageTag: 632bd207-eacf-4e79-bf46-67f48f95f79e
+		summarizeBy: sum
+		sourceColumn: Importe_Neto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IVA
+		dataType: double
+		lineageTag: 4432f758-daec-4dfd-9292-2bbafd1a3439
+		summarizeBy: sum
+		sourceColumn: IVA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Importe
+		dataType: double
+		lineageTag: 0021636d-1ff8-440e-a700-545ab06dc3a6
+		summarizeBy: sum
+		sourceColumn: Importe
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Importe_Desc_Extra
+		dataType: double
+		lineageTag: 54bc2f5f-3499-4f85-ae22-06e39ee09e9e
+		summarizeBy: sum
+		sourceColumn: Importe_Desc_Extra
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Precio_Costo
+		dataType: double
+		lineageTag: fa5f34f0-5347-47df-bbd2-86dfecc97102
+		summarizeBy: sum
+		sourceColumn: Precio_Costo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Precio_IVA
+		dataType: double
+		lineageTag: c6bbc8fa-a6c7-4bb0-baa7-c74459f43c6d
+		summarizeBy: sum
+		sourceColumn: Precio_IVA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Importe_Descuento
+		dataType: double
+		lineageTag: 3b1af991-32d2-43b3-ac7e-b0e5241feac3
+		summarizeBy: sum
+		sourceColumn: Importe_Descuento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Fecha_Comprobante
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 18d459ee-b703-4f9f-a4cb-f1774b2e3b86
+		summarizeBy: none
+		sourceColumn: Fecha_Comprobante
+
+		variation Variación
+			isDefault
+			relationship: 47228ff4-c3b0-4a51-88c9-53dd7792eb4a
+			defaultHierarchy: LocalDateTable_e4546ac5-4439-4863-b171-b5b907aea833.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_TipoComprobante
+		dataType: string
+		lineageTag: 6186072b-07f4-4c6c-9c62-868669132001
+		summarizeBy: none
+		sourceColumn: Id_TipoComprobante
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Contacto
+		dataType: string
+		lineageTag: 908b8c62-5c3a-4c85-8347-b1e13f65e128
+		summarizeBy: none
+		sourceColumn: Id_Contacto
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'visCpbtesItems Suc 2' = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Databases("200.89.174.198,25015"),
+				    DISTRIB_SUC1 = Origen{[Name="DISTRIB_SUC1"]}[Data],
+				    dbo_visComprobantesItems = DISTRIB_SUC1{[Schema="dbo",Item="visComprobantesItems"]}[Data]
+				in
+				    dbo_visComprobantesItems
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,655 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 1351.2226097932989,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 915.885639766447,
+            "y": 310.84176534359506
+          },
+          "nodeIndex": "visCpbtes Suc 1",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 981.71921843120253,
+            "y": -50
+          },
+          "nodeIndex": "visCpbtesFondos Suc 1",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 623.9285415196739,
+            "y": 220.66288543560074
+          },
+          "nodeIndex": "visCpbtesItems Suc 1",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1617.2226097932992,
+            "y": 365.48815227128557
+          },
+          "nodeIndex": "Clientes Suc 1",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 335.49493363801389,
+            "y": 481.76112929760524
+          },
+          "nodeIndex": "Productos Suc 1",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 316.84459479631573
+          },
+          "nodeIndex": "Grupos Suc 1",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1040.1061536503994,
+            "y": 667.874281128475
+          },
+          "nodeIndex": "Repartidores",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1332.9897010230247,
+            "y": 354.79688833941668
+          },
+          "nodeIndex": "Vendedores",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1851.2226097932992,
+            "y": 284.9371405642375
+          },
+          "nodeIndex": "Clientes Depo",
+          "nodeLineageTag": "1ccae28f-d6c3-4b4b-a0f5-d8168c79deeb",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2135.2226097932989,
+            "y": 284.9371405642375
+          },
+          "nodeIndex": "Clientes Suc 2",
+          "nodeLineageTag": "9f9cb125-2c6f-4d93-bd8e-aa59929b4915",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2703.2226097932989,
+            "y": 284.9371405642375
+          },
+          "nodeIndex": "visCpbtes Depo",
+          "nodeLineageTag": "72240b3e-2051-4241-90bc-ef733bdbc4bb",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2987.2226097932989,
+            "y": 284.9371405642375
+          },
+          "nodeIndex": "visCpbtes Suc 2",
+          "nodeLineageTag": "42c750f6-237f-409f-bebc-ad6a32899331",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3271.2226097932989,
+            "y": 284.9371405642375
+          },
+          "nodeIndex": "visCpbtesFondos Depo",
+          "nodeLineageTag": "a7cc8b29-a575-4e7a-b275-d95217b6e2b9",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3555.2226097932989,
+            "y": 284.9371405642375
+          },
+          "nodeIndex": "visCpbtesFondos Suc 2",
+          "nodeLineageTag": "259259eb-b1c5-4343-a11c-8d4ea49c5018",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3839.2226097932989,
+            "y": 284.9371405642375
+          },
+          "nodeIndex": "visCpbtesItems Depo",
+          "nodeLineageTag": "37990b63-9af7-4b99-863d-91245d0cf588",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2419.2226097932989,
+            "y": 284.9371405642375
+          },
+          "nodeIndex": "visCpbtesItems Suc 2",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {},
+          "nodeIndex": "Calendario",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {},
+          "nodeIndex": "visSaldosClientesDepo",
+          "nodeLineageTag": "5a3b4276-9d4d-4323-81e1-75272e14e68c",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {},
+          "nodeIndex": "visSaldosClientesSuc1",
+          "nodeLineageTag": "50657923-cc57-4610-aa8d-f13600fdb1e5",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {},
+          "nodeIndex": "visSaldosClientesSuc2",
+          "nodeLineageTag": "e54b4e71-57a7-4306-acee-5226b86767a0",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {},
+          "nodeIndex": "venSubGruposEstadisticos",
+          "nodeLineageTag": "a5e00fc5-310f-447c-801e-d4aacba9a590",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 368,
+            "y": 463
+          },
+          "nodeIndex": "visCpbtesItems Depo",
+          "nodeLineageTag": "37990b63-9af7-4b99-863d-91245d0cf588",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 503,
+            "y": -8
+          },
+          "nodeIndex": "Productos Suc 1",
+          "nodeLineageTag": "45ba862c-8464-4c1c-891e-0fe10979851b",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 772,
+            "y": 86
+          },
+          "nodeIndex": "visCpbtesItems Suc 1",
+          "nodeLineageTag": "840b6f5b-ba22-4aab-ba2f-eedc067712a0",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 871,
+            "y": 357
+          },
+          "nodeIndex": "visCpbtesItems Suc 2",
+          "nodeLineageTag": "d0ce45d5-cf6c-4455-8727-868c2693377a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": -43,
+            "y": 384
+          },
+          "nodeIndex": "visCpbtes Depo",
+          "nodeLineageTag": "72240b3e-2051-4241-90bc-ef733bdbc4bb",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": -50,
+            "y": 17
+          },
+          "nodeIndex": "visCpbtes Suc 1",
+          "nodeLineageTag": "2a352445-a32f-4367-a6cb-40288ae8c932",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Disposición 1",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 2,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Clientes Depo",
+          "nodeLineageTag": "1ccae28f-d6c3-4b4b-a0f5-d8168c79deeb",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 329,
+            "y": 0
+          },
+          "nodeIndex": "visCpbtes Depo",
+          "nodeLineageTag": "72240b3e-2051-4241-90bc-ef733bdbc4bb",
+          "size": {
+            "height": 504,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 995,
+            "y": 33
+          },
+          "nodeIndex": "visCpbtes Suc 2",
+          "nodeLineageTag": "42c750f6-237f-409f-bebc-ad6a32899331",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1027,
+            "y": 367
+          },
+          "nodeIndex": "visCpbtes Suc 1",
+          "nodeLineageTag": "2a352445-a32f-4367-a6cb-40288ae8c932",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 642,
+            "y": 406
+          },
+          "nodeIndex": "Clientes Suc 1",
+          "nodeLineageTag": "7f41c615-f1e4-44bd-9f4d-27d60dde0d53",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 417
+          },
+          "nodeIndex": "Clientes Suc 2",
+          "nodeLineageTag": "9f9cb125-2c6f-4d93-bd8e-aa59929b4915",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 679,
+            "y": 0
+          },
+          "nodeIndex": "Calendario",
+          "nodeLineageTag": "b8749de5-ae1b-46c5-bec3-ad9d38b7e88b",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Disposición 2",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 3,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 42,
+            "y": 60
+          },
+          "nodeIndex": "Clientes Depo",
+          "nodeLineageTag": "1ccae28f-d6c3-4b4b-a0f5-d8168c79deeb",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 277,
+            "y": 509
+          },
+          "nodeIndex": "visSaldosClientesDepo",
+          "nodeLineageTag": "5a3b4276-9d4d-4323-81e1-75272e14e68c",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 421
+          },
+          "nodeIndex": "visCpbtes Depo",
+          "nodeLineageTag": "72240b3e-2051-4241-90bc-ef733bdbc4bb",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 352,
+            "y": 0
+          },
+          "nodeIndex": "Clientes Suc 1",
+          "nodeLineageTag": "7f41c615-f1e4-44bd-9f4d-27d60dde0d53",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 633,
+            "y": 0
+          },
+          "nodeIndex": "visCpbtes Suc 1",
+          "nodeLineageTag": "2a352445-a32f-4367-a6cb-40288ae8c932",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1028,
+            "y": 0
+          },
+          "nodeIndex": "visSaldosClientesSuc1",
+          "nodeLineageTag": "50657923-cc57-4610-aa8d-f13600fdb1e5",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 523,
+            "y": 454
+          },
+          "nodeIndex": "Clientes Suc 2",
+          "nodeLineageTag": "9f9cb125-2c6f-4d93-bd8e-aa59929b4915",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 749,
+            "y": 556
+          },
+          "nodeIndex": "visCpbtes Suc 2",
+          "nodeLineageTag": "42c750f6-237f-409f-bebc-ad6a32899331",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1041,
+            "y": 252
+          },
+          "nodeIndex": "visSaldosClientesSuc2",
+          "nodeLineageTag": "e54b4e71-57a7-4306-acee-5226b86767a0",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Disposición 3",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 4,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 426,
+            "y": 58
+          },
+          "nodeIndex": "venSubGruposEstadisticos",
+          "nodeLineageTag": "a5e00fc5-310f-447c-801e-d4aacba9a590",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 49,
+            "y": 64
+          },
+          "nodeIndex": "Grupos Suc 1",
+          "nodeLineageTag": "9d0184e3-9151-46dc-8ebf-419612b7d30c",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 779,
+            "y": 164
+          },
+          "nodeIndex": "Productos Suc 1",
+          "nodeLineageTag": "45ba862c-8464-4c1c-891e-0fe10979851b",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Disposición 4",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Disposición 4",
+  "defaultDiagram": "Todas las tablas"
+}

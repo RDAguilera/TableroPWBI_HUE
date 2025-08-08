@@ -1,0 +1,60 @@
+table venSubGruposEstadisticos
+	lineageTag: a5e00fc5-310f-447c-801e-d4aacba9a590
+
+	column Id_Empresa
+		dataType: string
+		lineageTag: bec578dd-4460-4893-b889-216150bdd200
+		summarizeBy: none
+		sourceColumn: Id_Empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_SubGrupoEstadistico
+		dataType: int64
+		formatString: 0
+		lineageTag: ab99a7c2-e6cc-4dda-9cc8-f1146ee24f7c
+		summarizeBy: none
+		sourceColumn: Id_SubGrupoEstadistico
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_GrupoEstadistico1
+		dataType: int64
+		formatString: 0
+		lineageTag: 540000d5-102b-4864-bbe7-fd389a5f701a
+		summarizeBy: none
+		sourceColumn: Id_GrupoEstadistico1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Codigo_SubGrupo
+		dataType: int64
+		formatString: 0
+		lineageTag: a7b4a4c5-9e51-41e0-8553-1e8ef0045e60
+		summarizeBy: sum
+		sourceColumn: Codigo_SubGrupo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nombre_SubGrupoEstadistico
+		dataType: string
+		lineageTag: 72ee6ced-0537-4bad-b31b-bebd5da0f1c5
+		summarizeBy: none
+		sourceColumn: Nombre_SubGrupoEstadistico
+
+		annotation SummarizationSetBy = Automatic
+
+	partition venSubGruposEstadisticos = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Databases("200.89.174.198,25015"),
+				    DISTRIB_DEPO = Origen{[Name="DISTRIB_DEPO"]}[Data],
+				    dbo_venSubGruposEstadisticos = DISTRIB_DEPO{[Schema="dbo",Item="venSubGruposEstadisticos"]}[Data]
+				in
+				    dbo_venSubGruposEstadisticos
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

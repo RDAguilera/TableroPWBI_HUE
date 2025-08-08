@@ -1,0 +1,162 @@
+table Calendario
+	lineageTag: b8749de5-ae1b-46c5-bec3-ad9d38b7e88b
+
+	measure VentasTotales = CALCULATE('visCpbtes Depo'[Total Venta Depo]+'visCpbtes Suc 1'[Total Venta Suc 1]+'visCpbtes Suc 2'[Total Venta Suc 2])
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 38ca8e1f-934d-4849-bf6d-a430278cd6a7
+
+	measure 'Ventas Depo' = CALCULATE('visCpbtes Depo'[Total Venta Depo])
+		formatString: #,0
+		lineageTag: 11182bd6-d8d9-4e10-81ca-47d59f6d11b1
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Ventas Suc1' = CALCULATE('visCpbtes Suc 1'[Total Venta Suc 1])
+		formatString: #,0
+		lineageTag: 2d3b2732-1c42-4c48-954a-fe9bb351c07e
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Ventas Suc2' = CALCULATE('visCpbtes Suc 2'[Total Venta Suc 2])
+		formatString: #,0
+		lineageTag: d071d9a4-5023-4815-a61e-89186f6e3174
+
+	measure 'Clientes Depo' = CALCULATE(DISTINCTCOUNT('visCpbtes Depo'[Id_Contacto]))
+		formatString: 0
+		lineageTag: 2a697a56-6bc4-407b-a573-696113316fc3
+
+	measure 'Clientes Suc1' = CALCULATE(DISTINCTCOUNT('visCpbtes Suc 1'[Id_Contacto]))
+		formatString: 0
+		lineageTag: 478923e3-abf8-41de-aa32-65da9e56e895
+
+	measure 'Clientes Suc2' = CALCULATE(DISTINCTCOUNT('visCpbtes Suc 2'[Id_Contacto]))
+		formatString: 0
+		lineageTag: d1a5b066-124f-49c2-94a9-eef7dc97c242
+
+	measure 'Clientes Totales' = CALCULATE([Clientes Depo]+ [Clientes Suc1]+ Calendario[Clientes Suc2])
+		formatString: 0
+		lineageTag: 7bd7eebc-7ed6-481a-bd3e-eca2082c13cf
+
+	measure 'Ventas Depo Sin Suc' = CALCULATE('visCpbtes Depo'[Total Venta Depo sin Suc])
+		lineageTag: 3272cfdd-e4ff-4fea-b42a-1223e8d73023
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure VentasTotalesSinSuc = CALCULATE('visCpbtes Depo'[Total Venta Depo sin Suc]+'visCpbtes Suc 1'[Total Venta Suc 1]+'visCpbtes Suc 2'[Total Venta Suc 2])
+		formatString: #,0
+		lineageTag: c1d082b0-9d31-4eed-b6fc-97edd1316d48
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure SaldoaCobrarDepo = CALCULATE([SaldoDepo])
+		lineageTag: c761091c-8501-4bd3-8504-690eb5960724
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure SaldoaCobrarSuc1 = CALCULATE([SaldoSuc1])
+		lineageTag: e1920e35-6de8-4654-9106-015815405a78
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure SaldoaCobrarSuc2 = CALCULATE([SaldoSuc2])
+		lineageTag: 741cdfe2-8944-4b0b-aa7a-9e32a051d142
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Date
+		formatString: General Date
+		lineageTag: d1e35fb0-8008-48ef-a4cc-4e37a2ae5ac4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variación
+			isDefault
+			relationship: 4e132056-4427-4f5a-b3e5-0a1c4244d2f6
+			defaultHierarchy: LocalDateTable_6c0cf0a5-5ed4-46d5-971a-691adcbe1df8.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año
+		formatString: 0
+		lineageTag: dfc4f040-2ae7-48de-8c4c-51bbcec63d93
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Año]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		lineageTag: 361f8330-b2a5-4a4c-b67a-e0f9dfe35bdd
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes N°'
+		formatString: 0
+		lineageTag: fac1b230-a71e-4006-b419-f130d89eab3a
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Mes N°]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año-Mes
+		lineageTag: 3402a125-a91e-44e9-8194-5c678c0a7fe0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Año-Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Día
+		formatString: 0
+		lineageTag: 54f5c17b-4c48-43af-99f4-9e40ffdb1341
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Día]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nombre Día'
+		lineageTag: 0adf0477-ee55-4a5c-ac22-eee11c64d25c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Nombre Día]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre
+		lineageTag: aac79f57-e4af-4c98-a6c3-0825b39cf5ab
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Trimestre]
+
+		annotation SummarizationSetBy = Automatic
+
+	column NroSemana = IF(Calendario[Día]>=23,4,IF(Calendario[Día]>=15,3,IF(Calendario[Día]>=8,2,1)))
+		formatString: 0
+		lineageTag: 29f6792b-fe5d-4e5a-a0be-a33a6febc1d6
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendario = calculated
+		mode: import
+		source =
+				
+				ADDCOLUMNS (
+				    CALENDAR (MIN('visCpbtes Suc 1'[Fecha_Comprobante]),MAX('visCpbtes Suc 1'[Fecha_Comprobante])),
+				    "Año", YEAR([Date]),
+				    "Mes", FORMAT([Date], "MMMM"),
+				    "Mes N°", MONTH([Date]),
+				    "Año-Mes", FORMAT([Date], "YYYY-MM"),
+				    "Día", DAY([Date]),
+				    "Nombre Día", FORMAT([Date], "dddd"),
+				    "Trimestre", "Q" & FORMAT([Date], "Q")
+				)
+
+	annotation PBI_Id = 95f3f557a2154f21a662f69aaa2c1a28
+

@@ -1,0 +1,78 @@
+table visSaldosClientesSuc2
+	lineageTag: e54b4e71-57a7-4306-acee-5226b86767a0
+
+	column Id_Contacto
+		dataType: string
+		lineageTag: bc98fa4b-df64-4393-90b4-33744967f0f6
+		summarizeBy: none
+		sourceColumn: Id_Contacto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Comprobante
+		dataType: int64
+		formatString: 0
+		lineageTag: 4dc4c397-e83f-464f-bf4b-05cf31987bcb
+		summarizeBy: none
+		sourceColumn: Id_Comprobante
+
+		annotation SummarizationSetBy = Automatic
+
+	column Importe_Debe
+		dataType: double
+		lineageTag: 5cab6463-cb55-4137-a7f4-dc790ef4b623
+		summarizeBy: sum
+		sourceColumn: Importe_Debe
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Saldo
+		dataType: double
+		formatString: #,0
+		lineageTag: d5c932cb-e509-4475-8ad2-239572f03240
+		summarizeBy: sum
+		sourceColumn: Saldo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column Fecha_Comprobante
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 224b5b50-ec7b-4c5c-88e3-bf6ff4192882
+		summarizeBy: none
+		sourceColumn: Fecha_Comprobante
+
+		variation Variación
+			isDefault
+			relationship: 9b12cf0e-2330-4790-809f-b37868ad0301
+			defaultHierarchy: LocalDateTable_122a206f-5d1c-45a6-8b81-f308899925e9.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_CtaCte
+		dataType: int64
+		formatString: 0
+		lineageTag: e8cc2553-3c26-4ce9-aa04-73fb305f4597
+		summarizeBy: sum
+		sourceColumn: Id_CtaCte
+
+		annotation SummarizationSetBy = Automatic
+
+	partition visSaldosClientesSuc2 = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Databases("200.89.174.198,25015"),
+				    DISTRIB_SUC1 = Origen{[Name="DISTRIB_SUC1"]}[Data],
+				    dbo_visSaldosClientes = DISTRIB_SUC1{[Schema="dbo",Item="visSaldosClientes"]}[Data]
+				in
+				    dbo_visSaldosClientes
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

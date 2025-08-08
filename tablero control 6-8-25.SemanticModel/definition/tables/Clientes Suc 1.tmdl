@@ -1,0 +1,766 @@
+table 'Clientes Suc 1'
+	lineageTag: 7f41c615-f1e4-44bd-9f4d-27d60dde0d53
+
+	measure ComprobantesAdeudadosSuc1 = CALCULATE(COUNT(visSaldosClientesSuc1[Id_Comprobante]))
+		formatString: 0
+		lineageTag: fd89d75b-0ed8-46f7-bbf4-fc7b93c53c21
+
+	measure FechaUltimaCompraSuc1 = CALCULATE(MAX('visCpbtes Suc 1'[Fecha_Comprobante]))
+		formatString: Short Date
+		lineageTag: b8f712a2-847c-4e06-a3e9-7789849543dc
+
+	measure SaldoSuc1 = CALCULATE(SUM(visSaldosClientesSuc1[Saldo]))
+		formatString: #,0
+		lineageTag: 1a2b83e6-e4af-4a00-936f-6261ecdd29db
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column Id_Empresa
+		dataType: string
+		lineageTag: ab4e71ed-09fe-435c-bf60-57a0bf45b305
+		summarizeBy: none
+		sourceColumn: Id_Empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Cliente
+		dataType: int64
+		formatString: 0
+		lineageTag: 07fe6bf2-3fed-4dd6-a927-3b1587431ee2
+		summarizeBy: sum
+		sourceColumn: Id_Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Sucursal
+		dataType: int64
+		formatString: 0
+		lineageTag: 02f5fb1f-ec5d-4204-8113-63bb145bdda8
+		summarizeBy: sum
+		sourceColumn: Id_Sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nombre_Cliente
+		dataType: string
+		lineageTag: 8ac9e9f5-28ba-429a-a21c-0d04bb3b275e
+		summarizeBy: none
+		sourceColumn: Nombre_Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column RazonSocial
+		dataType: string
+		lineageTag: 2a110a6b-b3d3-4117-840f-b440ba09324f
+		summarizeBy: none
+		sourceColumn: RazonSocial
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_TipoIVA
+		dataType: int64
+		formatString: 0
+		lineageTag: a2431aea-4bc7-40d3-bbce-17be703d2343
+		summarizeBy: sum
+		sourceColumn: Id_TipoIVA
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tipo_Cuit
+		dataType: int64
+		formatString: 0
+		lineageTag: a45c32db-41f0-4536-be04-4328865e382c
+		summarizeBy: sum
+		sourceColumn: Tipo_Cuit
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUIT
+		dataType: string
+		lineageTag: 1202337d-3516-4203-87bf-411e6432d954
+		summarizeBy: none
+		sourceColumn: CUIT
+
+		annotation SummarizationSetBy = Automatic
+
+	column RUT
+		dataType: string
+		lineageTag: 7d5de1a5-9882-4260-855d-30212f38cbbe
+		summarizeBy: none
+		sourceColumn: RUT
+
+		annotation SummarizationSetBy = Automatic
+
+	column IBRUTOS
+		dataType: string
+		lineageTag: adc0b5a9-0523-4c30-be78-477030d23d4a
+		summarizeBy: none
+		sourceColumn: IBRUTOS
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Vendedor
+		dataType: string
+		lineageTag: c2352f06-4972-4174-8abd-ce8353598fa0
+		summarizeBy: none
+		sourceColumn: Id_Vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Transporte
+		dataType: string
+		lineageTag: 305ebb3d-d25d-407d-811f-9b51ee3762c9
+		summarizeBy: none
+		sourceColumn: Id_Transporte
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_TransporteReDespacho
+		dataType: string
+		lineageTag: 8e4af288-760c-4d61-a055-4795023ea019
+		summarizeBy: none
+		sourceColumn: Id_TransporteReDespacho
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Moneda
+		dataType: int64
+		formatString: 0
+		lineageTag: f72b8014-48bb-4eee-8d8a-f39c2634efa6
+		summarizeBy: sum
+		sourceColumn: Id_Moneda
+
+		annotation SummarizationSetBy = Automatic
+
+	column Horario
+		dataType: string
+		lineageTag: b0719a81-d176-4496-8726-997fa327b590
+		summarizeBy: none
+		sourceColumn: Horario
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Perfil
+		dataType: int64
+		formatString: 0
+		lineageTag: 603f5e68-36c7-40e9-ab35-6ece8fb8738a
+		summarizeBy: sum
+		sourceColumn: Id_Perfil
+
+		annotation SummarizationSetBy = Automatic
+
+	column Calcula_IBrutos
+		dataType: int64
+		formatString: 0
+		lineageTag: 13d6fd2b-8ebf-4a72-a836-65b8e87dcc42
+		summarizeBy: sum
+		sourceColumn: Calcula_IBrutos
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Condicion
+		dataType: decimal
+		formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+		lineageTag: b8356ec0-6c07-40de-aa33-536ab35a7900
+		summarizeBy: sum
+		sourceColumn: Id_Condicion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+	column LimiteCredito
+		dataType: double
+		lineageTag: d9a60d4c-6bb5-406b-a7a8-ce70d5c6bd64
+		summarizeBy: sum
+		sourceColumn: LimiteCredito
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Limite_DiasVencimiento
+		dataType: int64
+		formatString: 0
+		lineageTag: 6d6031a0-1d2a-4bae-9952-274605990597
+		summarizeBy: sum
+		sourceColumn: Limite_DiasVencimiento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bonificacion
+		dataType: double
+		lineageTag: 7aa37b7b-f6e8-4457-bf43-92f69721964a
+		summarizeBy: sum
+		sourceColumn: Bonificacion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Emite_ResumenCuentas
+		dataType: int64
+		formatString: 0
+		lineageTag: 0e86e905-f3d2-4768-8c3d-df44c0272758
+		summarizeBy: sum
+		sourceColumn: Emite_ResumenCuentas
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Cliente_CasaCentral
+		dataType: string
+		lineageTag: 9159972b-1ed1-4b49-b602-f6fdd215f1b3
+		summarizeBy: none
+		sourceColumn: Id_Cliente_CasaCentral
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Proveedor
+		dataType: string
+		lineageTag: d4a73a3b-eeb9-4b7a-b2bb-0b81bd8758f4
+		summarizeBy: none
+		sourceColumn: Id_Proveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Contacto
+		dataType: string
+		lineageTag: 138afcbc-bddb-4709-b866-9e7e3fc3d0a0
+		summarizeBy: none
+		sourceColumn: Id_Contacto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Certificado_Minorista_SanLuis
+		dataType: int64
+		formatString: 0
+		lineageTag: 6120efbd-34ad-4c53-911c-46c3a9112b44
+		summarizeBy: sum
+		sourceColumn: Certificado_Minorista_SanLuis
+
+		annotation SummarizationSetBy = Automatic
+
+	column Observaciones
+		dataType: string
+		lineageTag: 2462db3b-d39d-4814-afca-565a47bfac4b
+		summarizeBy: none
+		sourceColumn: Observaciones
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_LineaProduccion
+		dataType: int64
+		formatString: 0
+		lineageTag: dec43276-ad61-4b11-9349-d58a5cbcc05b
+		summarizeBy: sum
+		sourceColumn: Id_LineaProduccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Acepta_Cheques
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b45d785-0560-4439-950c-a65b45aa7f4e
+		summarizeBy: sum
+		sourceColumn: Acepta_Cheques
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha_Vto_AFIP
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: dab19e5d-e957-4a59-8725-2ba3060daaea
+		summarizeBy: none
+		sourceColumn: Fecha_Vto_AFIP
+
+		variation Variación
+			isDefault
+			relationship: 01eaad9b-aafd-4a72-9da9-b5938c2709e4
+			defaultHierarchy: LocalDateTable_5ad0fe00-1808-4b04-8e6a-47de55ef43a3.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha_Alta
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7acf66fb-0992-4717-8387-9d20381390f5
+		summarizeBy: none
+		sourceColumn: Fecha_Alta
+
+		variation Variación
+			isDefault
+			relationship: 9674e277-8358-4ad3-9235-7250845dcf0a
+			defaultHierarchy: LocalDateTable_f2e8abad-7b37-41f6-bcef-798fbb6103cc.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Estado
+		dataType: string
+		lineageTag: 117bfe4b-d039-422d-ab8c-8f12cde874bd
+		summarizeBy: none
+		sourceColumn: Id_Estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha_Estado
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d23a1d2e-90fa-4d1e-81f1-e8c98713ce64
+		summarizeBy: none
+		sourceColumn: Fecha_Estado
+
+		variation Variación
+			isDefault
+			relationship: a4f849fc-6cd2-47a1-95b5-869849c1208c
+			defaultHierarchy: LocalDateTable_c4b95a97-69a5-41fa-a89c-1e5a3e9faa64.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_EstadoMotivo
+		dataType: string
+		lineageTag: 20d1e1dd-cdf0-41c0-8687-6213ff82b0c7
+		summarizeBy: none
+		sourceColumn: Id_EstadoMotivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_VendedorSucursal
+		dataType: string
+		lineageTag: 88e009be-9e93-4f1f-a706-1fac4f08a19c
+		summarizeBy: none
+		sourceColumn: Id_VendedorSucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Porc_Comision_Venta
+		dataType: double
+		lineageTag: fb7c00b2-7757-4ac7-8f0b-5a6690a27528
+		summarizeBy: sum
+		sourceColumn: Porc_Comision_Venta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Porc_Comision_Cobranza
+		dataType: double
+		lineageTag: aa456fc1-4d94-475f-a1b6-95c4b849ed00
+		summarizeBy: sum
+		sourceColumn: Porc_Comision_Cobranza
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Fecha_UltimaVenta
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9d7bda49-12c0-4134-b1fd-6b52a18514f6
+		summarizeBy: none
+		sourceColumn: Fecha_UltimaVenta
+
+		variation Variación
+			isDefault
+			relationship: 9e5a0657-d0dd-45e2-9503-9b2f288831a0
+			defaultHierarchy: LocalDateTable_67464bd2-d9d4-42cf-96b3-6bca3d241df7.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Usuario
+		dataType: string
+		lineageTag: e3127cf4-5809-4007-92e8-60e00d3bbb4d
+		summarizeBy: none
+		sourceColumn: Id_Usuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_GrupoContacto
+		dataType: string
+		lineageTag: c5459da2-8fc7-4e74-975c-35303d6c833a
+		summarizeBy: none
+		sourceColumn: Id_GrupoContacto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Notas
+		dataType: string
+		lineageTag: 62cc5731-6e6a-4a83-9e63-723b5bc7f781
+		summarizeBy: none
+		sourceColumn: Notas
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_LineaDistribucion
+		dataType: int64
+		formatString: 0
+		lineageTag: c652f08a-3bfa-40ca-b867-2630aaedb7b6
+		summarizeBy: sum
+		sourceColumn: Id_LineaDistribucion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_LugarPagoTransporte
+		dataType: string
+		lineageTag: ace21fd8-17ad-4a46-903e-70de4cc10080
+		summarizeBy: none
+		sourceColumn: Id_LugarPagoTransporte
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_LugarPagoRedespacho
+		dataType: string
+		lineageTag: c1c5aa8c-b783-453c-9a78-dcf4a16f2de2
+		summarizeBy: none
+		sourceColumn: Id_LugarPagoRedespacho
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Lista
+		dataType: string
+		lineageTag: a85d21da-4ffd-416b-8b95-efd820964794
+		summarizeBy: none
+		sourceColumn: Id_Lista
+
+		annotation SummarizationSetBy = Automatic
+
+	column Controla_DtoCob
+		dataType: int64
+		formatString: 0
+		lineageTag: 8f18bb59-df79-49b4-8f07-2aa003dc8903
+		summarizeBy: sum
+		sourceColumn: Controla_DtoCob
+
+		annotation SummarizationSetBy = Automatic
+
+	column Inscripto_Conv_Multilateral
+		dataType: int64
+		formatString: 0
+		lineageTag: 6f2e7902-5e3d-4170-9c19-f080407919dc
+		summarizeBy: sum
+		sourceColumn: Inscripto_Conv_Multilateral
+
+		annotation SummarizationSetBy = Automatic
+
+	column Liquida_porCliente
+		dataType: int64
+		formatString: 0
+		lineageTag: 08fd4610-89b0-47ad-bfa1-28eaad05b12d
+		summarizeBy: sum
+		sourceColumn: Liquida_porCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Percibe_IngBrutosBsAs
+		dataType: int64
+		formatString: 0
+		lineageTag: a455e186-9480-46ed-8693-5cd3771d746b
+		summarizeBy: sum
+		sourceColumn: Percibe_IngBrutosBsAs
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_AlicuotaPercepcion
+		dataType: int64
+		formatString: 0
+		lineageTag: a3dc4b05-9d45-4ae6-a1f8-47177f7412cb
+		summarizeBy: sum
+		sourceColumn: Id_AlicuotaPercepcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Canjea
+		dataType: int64
+		formatString: 0
+		lineageTag: fc4065b9-d66f-44f1-b07b-878656b95e99
+		summarizeBy: sum
+		sourceColumn: Canjea
+
+		annotation SummarizationSetBy = Automatic
+
+	column HabilitaDescuentos
+		dataType: int64
+		formatString: 0
+		lineageTag: fbe832a0-20ba-4079-8a19-2f1921b252b5
+		summarizeBy: sum
+		sourceColumn: HabilitaDescuentos
+
+		annotation SummarizationSetBy = Automatic
+
+	column HabilitaSinCargo
+		dataType: int64
+		formatString: 0
+		lineageTag: 4494650f-55ad-45f6-8322-ff64d41d90a4
+		summarizeBy: sum
+		sourceColumn: HabilitaSinCargo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Idioma
+		dataType: int64
+		formatString: 0
+		lineageTag: cb1f57b1-864c-4fa9-9a04-4ad0ed54bca0
+		summarizeBy: sum
+		sourceColumn: Id_Idioma
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_ContactoComExt
+		dataType: string
+		lineageTag: 212b05cd-dfb6-4454-9aa0-da4bb1c0aec2
+		summarizeBy: none
+		sourceColumn: Id_ContactoComExt
+
+		annotation SummarizationSetBy = Automatic
+
+	column Percibe_IngBrutosJujuy
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b9afa1f-a634-417c-9a63-2ed7d5692772
+		summarizeBy: sum
+		sourceColumn: Percibe_IngBrutosJujuy
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ultimo_Precio_Cod1
+		dataType: double
+		lineageTag: 00d200c0-6148-4f06-a8ba-c17374cf839d
+		summarizeBy: sum
+		sourceColumn: Ultimo_Precio_Cod1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Ultimo_Precio_Cod2
+		dataType: double
+		lineageTag: 74bdde89-77b1-4bd1-8940-2f7b7a7c7a96
+		summarizeBy: sum
+		sourceColumn: Ultimo_Precio_Cod2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Ultima_Fecha_Cod1
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3260721f-f678-46a5-8f76-3cb0d046f0bd
+		summarizeBy: none
+		sourceColumn: Ultima_Fecha_Cod1
+
+		variation Variación
+			isDefault
+			relationship: 036f37ae-88bf-459b-95a2-e859c125b7eb
+			defaultHierarchy: LocalDateTable_bb04cb87-4b15-4357-a7f3-c64f0add2498.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ultima_Fecha_Cod2
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a803fe8c-92bc-41f0-af85-6d46333e04fa
+		summarizeBy: none
+		sourceColumn: Ultima_Fecha_Cod2
+
+		variation Variación
+			isDefault
+			relationship: e271485f-aa4b-4ef1-9e16-f4e9c0410b7b
+			defaultHierarchy: LocalDateTable_c5da9751-55d7-46e9-a0c9-a3cfa328752b.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Resol5698
+		dataType: int64
+		formatString: 0
+		lineageTag: e2aa3c0a-7548-4c3a-b149-ae5915ee8eac
+		summarizeBy: sum
+		sourceColumn: Resol5698
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ultimo_Vto_Cod1
+		dataType: int64
+		formatString: 0
+		lineageTag: a19540bd-4f84-4ad3-9330-9d86a5a7602d
+		summarizeBy: sum
+		sourceColumn: Ultimo_Vto_Cod1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ultimo_Vto_Cod2
+		dataType: int64
+		formatString: 0
+		lineageTag: cb2dce6f-4116-4f71-9b6b-c6b82fe04d62
+		summarizeBy: sum
+		sourceColumn: Ultimo_Vto_Cod2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sucursal_Origen
+		dataType: int64
+		formatString: 0
+		lineageTag: 262f38d2-f52b-4c8e-a656-7c85e3732c57
+		summarizeBy: sum
+		sourceColumn: Sucursal_Origen
+
+		annotation SummarizationSetBy = Automatic
+
+	column Porc_IngBrTuc
+		dataType: double
+		lineageTag: ef0495d2-0e24-4f8a-b6c8-fade5deba043
+		summarizeBy: sum
+		sourceColumn: Porc_IngBrTuc
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Excluir_ListadoVentas
+		dataType: int64
+		formatString: 0
+		lineageTag: 6eb4abb1-7df9-4089-8ba3-e3bade069669
+		summarizeBy: sum
+		sourceColumn: Excluir_ListadoVentas
+
+		annotation SummarizationSetBy = Automatic
+
+	column Franquicia
+		dataType: int64
+		formatString: 0
+		lineageTag: 624a26f2-156c-42f6-9635-5bc2f90e3dbb
+		summarizeBy: sum
+		sourceColumn: Franquicia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Numero_Documento
+		dataType: string
+		lineageTag: db0240c5-0603-48d2-b2e7-4b8276d3a862
+		summarizeBy: none
+		sourceColumn: Numero_Documento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha_Inicio_PercComInd
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 87ff0e1b-a0a2-46e4-a233-e6e5f078fdc4
+		summarizeBy: none
+		sourceColumn: Fecha_Inicio_PercComInd
+
+		variation Variación
+			isDefault
+			relationship: 21b12e78-329d-474d-b0de-6a2bd9383501
+			defaultHierarchy: LocalDateTable_3f8c28a3-f67a-4551-ab1d-de36e7860eb5.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_AlicuotaPercComInd
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c539941-6401-4a4b-925b-dbb1414e06cf
+		summarizeBy: sum
+		sourceColumn: Id_AlicuotaPercComInd
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Zona
+		dataType: string
+		lineageTag: 3660ac79-c6c6-4325-99ad-e35aa96f4f64
+		summarizeBy: none
+		sourceColumn: Id_Zona
+
+		annotation SummarizationSetBy = Automatic
+
+	column NoComputaIva
+		dataType: int64
+		formatString: 0
+		lineageTag: 057145b5-acf7-4c7a-8d50-f761eb9cec20
+		summarizeBy: sum
+		sourceColumn: NoComputaIva
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrdenReparto
+		dataType: int64
+		formatString: 0
+		lineageTag: e245115b-e6d8-4c95-b9dd-8ff275871afd
+		summarizeBy: sum
+		sourceColumn: OrdenReparto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Productos_Sugeridos
+		dataType: string
+		lineageTag: 4785bdaa-306e-4f1a-9ac7-60eb2179e09b
+		summarizeBy: none
+		sourceColumn: Productos_Sugeridos
+
+		annotation SummarizationSetBy = Automatic
+
+	column Excluye_PercepcionIVA
+		dataType: int64
+		formatString: 0
+		lineageTag: 47d2636a-8803-4eb4-ba89-c81f3aa0e4e4
+		summarizeBy: sum
+		sourceColumn: Excluye_PercepcionIVA
+
+		annotation SummarizationSetBy = Automatic
+
+	column Latitud
+		dataType: string
+		lineageTag: d3c39190-a36e-4c5f-bf63-ec59b15c1f98
+		summarizeBy: none
+		sourceColumn: Latitud
+
+		annotation SummarizationSetBy = Automatic
+
+	column Longitud
+		dataType: string
+		lineageTag: 0740db2e-25c0-45e3-87e8-1a0d0e79bd0e
+		summarizeBy: none
+		sourceColumn: Longitud
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cliente_Interno
+		dataType: int64
+		formatString: 0
+		lineageTag: 51a20fc6-f9e3-444d-a30f-85b1ed76f7ab
+		summarizeBy: sum
+		sourceColumn: Cliente_Interno
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_localidadcensal
+		dataType: int64
+		formatString: 0
+		lineageTag: 62e0c4e3-2a25-4ffc-9162-556980a77cad
+		summarizeBy: sum
+		sourceColumn: id_localidadcensal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Frecuencia_Compra
+		dataType: int64
+		formatString: 0
+		lineageTag: 528f3738-d13a-4171-b209-5bdd1769316d
+		summarizeBy: sum
+		sourceColumn: Frecuencia_Compra
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Clientes Suc 1' = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Databases("200.89.174.198,25015"),
+				    DISTRIB = Origen{[Name="DISTRIB"]}[Data],
+				    dbo_basclientes = DISTRIB{[Schema="dbo",Item="basclientes"]}[Data]
+				in
+				    dbo_basclientes
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

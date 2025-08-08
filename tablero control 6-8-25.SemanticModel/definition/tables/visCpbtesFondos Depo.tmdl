@@ -1,0 +1,116 @@
+table 'visCpbtesFondos Depo'
+	lineageTag: a7cc8b29-a575-4e7a-b275-d95217b6e2b9
+
+	column Id_Fondo
+		dataType: string
+		lineageTag: 84eb26c4-8be9-4b26-a7ae-8b6b08dac01e
+		summarizeBy: none
+		sourceColumn: Id_Fondo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha_Emision
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8c1f9454-715b-411a-85ac-2d7ddc8bb7f5
+		summarizeBy: none
+		sourceColumn: Fecha_Emision
+
+		variation Variación
+			isDefault
+			relationship: 83a13158-0096-4bdf-a14f-bc22f254baca
+			defaultHierarchy: LocalDateTable_06730cc0-00df-4e73-bc61-f08a72bf7de5.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_TipoComprobante
+		dataType: string
+		lineageTag: c1d8fb79-3534-436d-96e9-ef304c28f55a
+		summarizeBy: none
+		sourceColumn: Id_TipoComprobante
+
+		annotation SummarizationSetBy = Automatic
+
+	column ImporteDebe
+		dataType: double
+		lineageTag: f6df796e-0f63-461c-9068-2691c15bb238
+		summarizeBy: sum
+		sourceColumn: ImporteDebe
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ImporteHaber
+		dataType: double
+		lineageTag: c2be2db5-3253-461e-b628-f7514ad86188
+		summarizeBy: sum
+		sourceColumn: ImporteHaber
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Fecha_Egreso
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: cc1fd889-ffd6-4df2-a8bf-7a3cd50882aa
+		summarizeBy: none
+		sourceColumn: Fecha_Egreso
+
+		variation Variación
+			isDefault
+			relationship: 8cc1acc6-bbe0-4ecd-aa41-8d55960da5b0
+			defaultHierarchy: LocalDateTable_a9fccac2-4d1b-43ad-bc5c-d9e0eccad910.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_ConceptoBancario
+		dataType: int64
+		formatString: 0
+		lineageTag: 00fd9ba0-69ce-4e83-a6a1-789fc6ce99fb
+		summarizeBy: sum
+		sourceColumn: Id_ConceptoBancario
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_ConceptoGasto
+		dataType: int64
+		formatString: 0
+		lineageTag: aa52ca1d-0d5b-4313-95a7-6421f909e0d4
+		summarizeBy: sum
+		sourceColumn: Id_ConceptoGasto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Numero_Comprobante
+		dataType: string
+		lineageTag: ac0f1236-9257-4e3f-81a6-4c8b99bb8329
+		summarizeBy: none
+		sourceColumn: Numero_Comprobante
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Comprobante
+		dataType: int64
+		formatString: 0
+		lineageTag: e1c849db-63de-4057-9b6d-f81a904dab4f
+		summarizeBy: none
+		sourceColumn: Id_Comprobante
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'visCpbtesFondos Depo' = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Databases("200.89.174.198,25015"),
+				    DISTRIB_DEPO = Origen{[Name="DISTRIB_DEPO"]}[Data],
+				    dbo_visComprobantesFondos = DISTRIB_DEPO{[Schema="dbo",Item="visComprobantesFondos"]}[Data]
+				in
+				    dbo_visComprobantesFondos
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

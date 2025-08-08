@@ -1,0 +1,207 @@
+table 'visCpbtes Suc 1'
+	lineageTag: 2a352445-a32f-4367-a6cb-40288ae8c932
+
+	measure 'Total Venta Suc 1' = CALCULATE(SUM('visCpbtes Suc 1'[Total_Comprobante]),'visCpbtes Suc 1'[Id_TipoComprobante]="PREVEN")
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 8dbd727a-1999-49fc-963e-8d77d64d3f8e
+
+	column Fecha_Comprobante
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9ccb89f2-c8b7-418b-aac4-7e940f94f520
+		summarizeBy: none
+		sourceColumn: Fecha_Comprobante
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Comprobante
+		dataType: int64
+		formatString: 0
+		lineageTag: 41c709b6-0a78-4cd8-b028-1bbd04813cd3
+		summarizeBy: none
+		sourceColumn: Id_Comprobante
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Contacto
+		dataType: string
+		lineageTag: 9f9b97c1-acf3-488e-87a4-efe1238d137c
+		summarizeBy: none
+		sourceColumn: Id_Contacto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Vendedor
+		dataType: string
+		lineageTag: ba2d0c6d-0479-4146-8362-2d6f3875b75b
+		summarizeBy: none
+		sourceColumn: Id_Vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_TipoComprobante
+		dataType: string
+		lineageTag: c9dd95a9-a4ab-479b-8c12-fa80a9bdb0e0
+		summarizeBy: none
+		sourceColumn: Id_TipoComprobante
+
+		annotation SummarizationSetBy = Automatic
+
+	column Letra_Comprobante
+		dataType: string
+		lineageTag: 7b019e8c-0027-4f41-8c06-4513918760c1
+		summarizeBy: none
+		sourceColumn: Letra_Comprobante
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sucursal_Comprobante
+		dataType: string
+		lineageTag: 838d0902-8c5e-4532-8cff-d973be6ceffd
+		summarizeBy: none
+		sourceColumn: Sucursal_Comprobante
+
+		annotation SummarizationSetBy = Automatic
+
+	column Numero_Comprobante
+		dataType: string
+		lineageTag: 4599dd82-2ad6-4263-bd82-0970c26b2030
+		summarizeBy: none
+		sourceColumn: Numero_Comprobante
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Comprobante
+		dataType: double
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: d7caf2c6-2c7f-4648-ba97-230305f09650
+		summarizeBy: sum
+		sourceColumn: Total_Comprobante
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_ConceptoGasto
+		dataType: int64
+		formatString: 0
+		lineageTag: 2cf7fd70-f0fa-4f48-a776-306d68bbbb50
+		summarizeBy: sum
+		sourceColumn: Id_ConceptoGasto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_ConceptoBancario
+		dataType: int64
+		formatString: 0
+		lineageTag: 91641742-aff9-4152-8653-239ba86f3cc0
+		summarizeBy: sum
+		sourceColumn: Id_ConceptoBancario
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_FormaEntrega
+		dataType: int64
+		formatString: 0
+		lineageTag: 262cc424-d4ce-4ea5-9eb9-4e04a1f9fb7e
+		summarizeBy: sum
+		sourceColumn: Id_FormaEntrega
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrdenReparto
+		dataType: int64
+		formatString: 0
+		lineageTag: d88ff6f6-822b-4168-b618-eca4ce7a780c
+		summarizeBy: sum
+		sourceColumn: OrdenReparto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Repartidor
+		dataType: int64
+		formatString: 0
+		lineageTag: f9af668a-9a2c-42bb-b605-a6453ab4242c
+		summarizeBy: none
+		sourceColumn: Id_Repartidor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_EstadoPedido
+		dataType: int64
+		formatString: 0
+		lineageTag: d0206068-11f8-46b3-a278-bbd806a1099d
+		summarizeBy: sum
+		sourceColumn: Id_EstadoPedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Sucursal
+		dataType: int64
+		formatString: 0
+		lineageTag: 80ba18ea-52b9-4a03-8fac-74159ed4e95a
+		summarizeBy: sum
+		sourceColumn: Id_Sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Día de la semana'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0c70033d-3f31-447c-988a-d231dc9360b1
+		summarizeBy: sum
+		sourceColumn: Día de la semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nombre del día'
+		dataType: string
+		lineageTag: 7e4bb360-e2bc-4910-9ee3-d84b68e8ba03
+		summarizeBy: none
+		sourceColumn: Nombre del día
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Semana del mes'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1ec00e71-581e-45ab-b38b-8e0765da155a
+		summarizeBy: sum
+		sourceColumn: Semana del mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Día
+		dataType: int64
+		formatString: 0
+		lineageTag: e7c9fdbb-d840-4bd2-bf40-0f4a66c3c330
+		summarizeBy: sum
+		sourceColumn: Día
+
+		annotation SummarizationSetBy = Automatic
+
+	column NroSemana
+		dataType: string
+		lineageTag: db3b319b-e72f-4c36-9981-98535e1dcda4
+		summarizeBy: none
+		sourceColumn: NroSemana
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'visCpbtes Suc 1' = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Databases("200.89.174.198,25015"),
+				    DISTRIB = Origen{[Name="DISTRIB"]}[Data],
+				    dbo_visComprobantes = DISTRIB{[Schema="dbo",Item="visComprobantes"]}[Data],
+				    #"Día de la semana insertado" = Table.AddColumn(dbo_visComprobantes, "Día de la semana", each Date.DayOfWeek([Fecha_Comprobante]), Int64.Type),
+				    #"Nombre del día insertado" = Table.AddColumn(#"Día de la semana insertado", "Nombre del día", each Date.DayOfWeekName([Fecha_Comprobante]), type text),
+				    #"Semana del mes insertada" = Table.AddColumn(#"Nombre del día insertado", "Semana del mes", each Date.WeekOfMonth([Fecha_Comprobante]), Int64.Type),
+				    #"Día insertado" = Table.AddColumn(#"Semana del mes insertada", "Día", each Date.Day([Fecha_Comprobante]), Int64.Type),
+				    #"Columna condicional agregada" = Table.AddColumn(#"Día insertado", "NroSemana", each if [Día] >= 23 then 4 else if [Día] >= 15 then 3 else if [Día] >= 8 then 2 else 1)
+				in
+				    #"Columna condicional agregada"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

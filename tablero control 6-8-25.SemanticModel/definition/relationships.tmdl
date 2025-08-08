@@ -1,0 +1,295 @@
+relationship c35610a0-d5ae-4478-8ba9-f0363352005c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'visCpbtesFondos Suc 1'.Fecha_Emision
+	toColumn: LocalDateTable_aabbb599-23d8-447a-883a-581d9250c0f1.Date
+
+relationship 747588ba-2b1d-4d65-b8ad-d0df0ac1a7ab
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'visCpbtesFondos Suc 1'.Fecha_Egreso
+	toColumn: LocalDateTable_d8af18df-5d68-4883-a3ee-3969600c36b0.Date
+
+relationship c49d9d4a-6f37-412a-b17c-604931f8004d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'visCpbtesItems Suc 1'.Fecha_Comprobante
+	toColumn: LocalDateTable_9c2ebfb5-202d-4893-809a-f73c32e0003a.Date
+
+relationship 01eaad9b-aafd-4a72-9da9-b5938c2709e4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Suc 1'.Fecha_Vto_AFIP
+	toColumn: LocalDateTable_5ad0fe00-1808-4b04-8e6a-47de55ef43a3.Date
+
+relationship 9674e277-8358-4ad3-9235-7250845dcf0a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Suc 1'.Fecha_Alta
+	toColumn: LocalDateTable_f2e8abad-7b37-41f6-bcef-798fbb6103cc.Date
+
+relationship a4f849fc-6cd2-47a1-95b5-869849c1208c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Suc 1'.Fecha_Estado
+	toColumn: LocalDateTable_c4b95a97-69a5-41fa-a89c-1e5a3e9faa64.Date
+
+relationship 9e5a0657-d0dd-45e2-9503-9b2f288831a0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Suc 1'.Fecha_UltimaVenta
+	toColumn: LocalDateTable_67464bd2-d9d4-42cf-96b3-6bca3d241df7.Date
+
+relationship 036f37ae-88bf-459b-95a2-e859c125b7eb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Suc 1'.Ultima_Fecha_Cod1
+	toColumn: LocalDateTable_bb04cb87-4b15-4357-a7f3-c64f0add2498.Date
+
+relationship e271485f-aa4b-4ef1-9e16-f4e9c0410b7b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Suc 1'.Ultima_Fecha_Cod2
+	toColumn: LocalDateTable_c5da9751-55d7-46e9-a0c9-a3cfa328752b.Date
+
+relationship 21b12e78-329d-474d-b0de-6a2bd9383501
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Suc 1'.Fecha_Inicio_PercComInd
+	toColumn: LocalDateTable_3f8c28a3-f67a-4551-ab1d-de36e7860eb5.Date
+
+relationship 1e3ea6ee-0d2b-4dec-a16c-3a27edd6c4eb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Productos Suc 1'.Fecha_Estado
+	toColumn: LocalDateTable_eca8ca9d-7522-4c56-bd93-1b9969d5eeb0.Date
+
+relationship 7a32481f-53b2-4dc5-bff6-4aa5f23f486f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Productos Suc 1'.Fecha_Costo
+	toColumn: LocalDateTable_1195b8ee-5f74-4ecc-9489-b89c0c2da17b.Date
+
+relationship efa40598-1ae4-4767-9634-905399923a3a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Productos Suc 1'.Fecha_Venta
+	toColumn: LocalDateTable_13bfc289-c101-4e54-a78d-2ceaa46638f0.Date
+
+relationship eac36689-b0ba-4561-908a-e5cfe8064434
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Vendedores.Fecha_Alta
+	toColumn: LocalDateTable_93c417a6-a0f9-46ae-bc2b-ea4a7cb8e6ab.Date
+
+relationship ac2f45f4-2a9e-4141-9734-2ceb3407413a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Vendedores.Fecha_Estado
+	toColumn: LocalDateTable_7dc489eb-7b2c-4b0f-b6ca-dc4328656cc1.Date
+
+relationship AutoDetected_c2c60031-44d1-4f9d-bb99-6080298ec76a
+	fromColumn: 'visCpbtesFondos Suc 1'.Id_Comprobante
+	toColumn: 'visCpbtes Suc 1'.Id_Comprobante
+
+relationship AutoDetected_f5651ffc-4d44-4bc4-a603-1f5073eae7d9
+	fromColumn: 'visCpbtesItems Suc 1'.Id_Comprobante
+	toColumn: 'visCpbtes Suc 1'.Id_Comprobante
+
+relationship AutoDetected_bd5e0c1e-8312-448b-bcf8-2894b85b4b9c
+	fromColumn: 'visCpbtes Suc 1'.Id_Repartidor
+	toColumn: Repartidores.Id_Repartidor
+
+relationship AutoDetected_8415607c-bd40-4d91-b439-9f4b1bb2562b
+	fromColumn: 'visCpbtesItems Suc 1'.Id_Producto
+	toColumn: 'Productos Suc 1'.Id_Producto
+
+relationship 83a13158-0096-4bdf-a14f-bc22f254baca
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'visCpbtesFondos Depo'.Fecha_Emision
+	toColumn: LocalDateTable_06730cc0-00df-4e73-bc61-f08a72bf7de5.Date
+
+relationship 8cc1acc6-bbe0-4ecd-aa41-8d55960da5b0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'visCpbtesFondos Depo'.Fecha_Egreso
+	toColumn: LocalDateTable_a9fccac2-4d1b-43ad-bc5c-d9e0eccad910.Date
+
+relationship 09ce94cc-cde0-4d01-987e-db936fce54d0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'visCpbtesItems Depo'.Fecha_Comprobante
+	toColumn: LocalDateTable_4bb5f650-a38d-4c2a-961c-d17493b76a31.Date
+
+relationship 2ca2aeb1-c4cc-41c3-addc-683fda9a215f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Depo'.Fecha_Vto_AFIP
+	toColumn: LocalDateTable_e419af6b-200d-4fd0-ba2b-9bcf26b9a5ea.Date
+
+relationship 468a5855-df07-491d-bf07-6740bad97f8e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Depo'.Fecha_Alta
+	toColumn: LocalDateTable_c6722bba-587f-47d5-9985-dc59a449b4c5.Date
+
+relationship 6ac8dcc5-c7c0-4604-b7cf-ae29854ebd13
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Depo'.Fecha_Estado
+	toColumn: LocalDateTable_5bd784d2-b5db-49ab-9086-19324d44a84c.Date
+
+relationship a8438880-bf67-4e69-8325-bb958a32872e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Depo'.Fecha_UltimaVenta
+	toColumn: LocalDateTable_9a0d6d99-abdf-45c8-82d3-914d29775ece.Date
+
+relationship e30564c4-d3ee-40b1-9fc6-9b79cfc05723
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Depo'.Ultima_Fecha_Cod1
+	toColumn: LocalDateTable_5ded4b00-8857-48f9-a27e-9f6ccc97c4fb.Date
+
+relationship be2d321b-72aa-4a96-931c-6b212cad2705
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Depo'.Ultima_Fecha_Cod2
+	toColumn: LocalDateTable_30481c52-48fe-44b3-984d-3fd96fff74cd.Date
+
+relationship 10edcc0e-82c4-44f5-91ea-67ea29973668
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Depo'.Fecha_Inicio_PercComInd
+	toColumn: LocalDateTable_3c23636b-b1ea-4f1f-8050-4a3877633a47.Date
+
+relationship 7bb8680d-befa-4aa6-9946-127d8f516934
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'visCpbtesFondos Suc 2'.Fecha_Emision
+	toColumn: LocalDateTable_49115580-05f0-4ca8-a947-8f996727c192.Date
+
+relationship 3cbfcff6-7f65-43e6-b877-48ba4caae8cb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'visCpbtesFondos Suc 2'.Fecha_Egreso
+	toColumn: LocalDateTable_1ef3999d-25ee-4e84-b4fd-b691d0e2efcf.Date
+
+relationship 47228ff4-c3b0-4a51-88c9-53dd7792eb4a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'visCpbtesItems Suc 2'.Fecha_Comprobante
+	toColumn: LocalDateTable_e4546ac5-4439-4863-b171-b5b907aea833.Date
+
+relationship d1af7a34-6326-4b0c-9ba3-1e62ff42f030
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Suc 2'.Fecha_Vto_AFIP
+	toColumn: LocalDateTable_97f7569a-d87e-46db-bd10-12af7569a18c.Date
+
+relationship 82a931df-d2fd-4a27-97ff-d7938e16380b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Suc 2'.Fecha_Alta
+	toColumn: LocalDateTable_daeaf3bc-6849-4b55-89e0-8ed2b27646e2.Date
+
+relationship 41f9f4fe-11f2-4b04-abfd-66184f39593b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Suc 2'.Fecha_Estado
+	toColumn: LocalDateTable_cff992df-9dd7-4c89-95ca-7e87d11fdd4b.Date
+
+relationship 9b8c16fa-7c51-49f1-865e-422d2076139b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Suc 2'.Fecha_UltimaVenta
+	toColumn: LocalDateTable_d96fdc79-50d7-40c2-9374-e2d62a9afee4.Date
+
+relationship 6eb38bcb-771c-48b3-b8e9-0ea5fc45d5d1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Suc 2'.Ultima_Fecha_Cod1
+	toColumn: LocalDateTable_83dddcb8-095f-4c05-9e02-7b2fced0a549.Date
+
+relationship a8e939f1-0612-40be-8e09-ec275c72f253
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Suc 2'.Ultima_Fecha_Cod2
+	toColumn: LocalDateTable_928c63ab-1f9a-42d3-9f4b-2cf0d68de63b.Date
+
+relationship bc4a95f1-58e8-4c6e-8911-806cc7eb60ad
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Clientes Suc 2'.Fecha_Inicio_PercComInd
+	toColumn: LocalDateTable_c99adfc7-5fcf-4832-845b-a2c2981b1b5f.Date
+
+relationship AutoDetected_6fc2d693-0a5e-47e1-8837-730bbc53283c
+	fromColumn: 'visCpbtesFondos Depo'.Id_Comprobante
+	toColumn: 'visCpbtes Suc 1'.Id_Comprobante
+
+relationship AutoDetected_c91ea45b-def9-424f-848e-388326bc85b1
+	fromColumn: 'visCpbtesFondos Suc 2'.Id_Comprobante
+	toColumn: 'visCpbtes Suc 1'.Id_Comprobante
+
+relationship AutoDetected_8b0edd57-8b60-48af-aa9a-54ac845cf71a
+	fromColumn: 'visCpbtesItems Suc 2'.Id_Comprobante
+	toColumn: 'visCpbtes Suc 1'.Id_Comprobante
+
+relationship AutoDetected_54d66733-933c-4945-80b0-83413588ca6f
+	isActive: false
+	fromColumn: 'visCpbtes Depo'.Id_Repartidor
+	toColumn: Repartidores.Id_Repartidor
+
+relationship AutoDetected_7084976a-e2a5-462d-8bb3-80885c3c2b1b
+	isActive: false
+	fromColumn: 'visCpbtes Suc 2'.Id_Repartidor
+	toColumn: Repartidores.Id_Repartidor
+
+relationship AutoDetected_370962fb-724e-47f5-91f3-dd4aad9f65c4
+	fromColumn: 'visCpbtesItems Depo'.Id_Producto
+	toColumn: 'Productos Suc 1'.Id_Producto
+
+relationship AutoDetected_4252847e-f78b-414c-b014-c871ad5eabe0
+	fromColumn: 'visCpbtesItems Suc 2'.Id_Producto
+	toColumn: 'Productos Suc 1'.Id_Producto
+
+relationship 0649f2f6-972b-ffec-8db4-abe4eb65c27c
+	fromColumn: 'visCpbtes Depo'.Id_Contacto
+	toColumn: 'Clientes Depo'.Id_Contacto
+
+relationship 05a689e4-03a4-6ea4-ecac-6dd9ee02a70d
+	fromColumn: 'visCpbtes Suc 1'.Id_Contacto
+	toColumn: 'Clientes Suc 1'.Id_Contacto
+
+relationship 1d82a13c-b6d1-a546-d3fc-6f9122c9eab3
+	fromColumn: 'visCpbtes Suc 2'.Id_Contacto
+	toColumn: 'Clientes Suc 2'.Id_Contacto
+
+relationship 4e132056-4427-4f5a-b3e5-0a1c4244d2f6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Calendario.Date
+	toColumn: LocalDateTable_6c0cf0a5-5ed4-46d5-971a-691adcbe1df8.Date
+
+relationship 94bd9a12-f55d-da1a-5fe4-3288b0ef492b
+	fromColumn: 'visCpbtes Depo'.Fecha_Comprobante
+	toColumn: Calendario.Date
+
+relationship 713b0230-66e8-9002-b4df-88ac4ca8448d
+	fromColumn: 'visCpbtes Suc 2'.Fecha_Comprobante
+	toColumn: Calendario.Date
+
+relationship a702b220-07b7-a335-87f5-b8b2432379fd
+	fromColumn: 'visCpbtes Suc 1'.Fecha_Comprobante
+	toColumn: Calendario.Date
+
+relationship 92183813-703c-45b5-b76c-5d7b0d005904
+	joinOnDateBehavior: datePartOnly
+	fromColumn: visSaldosClientesSuc1.Fecha_Comprobante
+	toColumn: LocalDateTable_d9729c67-8802-4bd3-8566-a9e4b642538b.Date
+
+relationship 6415f7d2-6b09-4d58-bfd5-76e164306e74
+	joinOnDateBehavior: datePartOnly
+	fromColumn: visSaldosClientesDepo.Fecha_Comprobante
+	toColumn: LocalDateTable_a15bbbb5-a866-448b-a6ed-8e70a30ed87b.Date
+
+relationship AutoDetected_119b3490-a495-46bc-ab4b-ff24aceb3eba
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: visSaldosClientesSuc1.Id_Comprobante
+	toColumn: 'visCpbtes Suc 1'.Id_Comprobante
+
+relationship AutoDetected_f1cd3d9f-3203-40c7-b6d7-581020c0fef6
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: visSaldosClientesDepo.Id_Comprobante
+	toColumn: 'visCpbtes Depo'.Id_Comprobante
+
+relationship 9b12cf0e-2330-4790-809f-b37868ad0301
+	joinOnDateBehavior: datePartOnly
+	fromColumn: visSaldosClientesSuc2.Fecha_Comprobante
+	toColumn: LocalDateTable_122a206f-5d1c-45a6-8b81-f308899925e9.Date
+
+relationship AutoDetected_0f5e79cc-edd4-4c02-b4b7-31ecd5b26555
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: visSaldosClientesSuc2.Id_Comprobante
+	toColumn: 'visCpbtes Suc 2'.Id_Comprobante
+
+relationship e48e9427-b525-3913-2e78-1a954fe9a1d5
+	fromColumn: 'visCpbtesItems Depo'.Id_Comprobante
+	toColumn: 'visCpbtes Depo'.Id_Comprobante
+
+relationship AutoDetected_ac24b9eb-c123-40b9-90ce-a5c0b84554b2
+	fromColumn: venSubGruposEstadisticos.Id_GrupoEstadistico1
+	toColumn: 'Grupos Suc 1'.Id_GrupoEstadistico1
+
+relationship AutoDetected_3a7ce2c0-b5d5-4eca-9930-983bef017bf9
+	fromColumn: 'Productos Suc 1'.Id_SubGrupoEstadistico
+	toColumn: venSubGruposEstadisticos.Id_SubGrupoEstadistico
+

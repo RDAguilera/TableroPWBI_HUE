@@ -1,0 +1,238 @@
+table Vendedores
+	lineageTag: f564ba0e-769c-4696-8fbc-bd02c803fb7a
+
+	column Id_Empresa
+		dataType: string
+		lineageTag: 6985e401-536d-4fb0-81ed-0e9fc5dbfb3e
+		summarizeBy: none
+		sourceColumn: Id_Empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Vendedor
+		dataType: string
+		lineageTag: 1108b2bf-a3e9-483b-ad6a-9208f096f00a
+		summarizeBy: none
+		sourceColumn: Id_Vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Sucursal
+		dataType: int64
+		formatString: 0
+		lineageTag: a72fc240-8e8c-4364-bb43-4ffc52ed7465
+		summarizeBy: sum
+		sourceColumn: Id_Sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nombre_Vendedor
+		dataType: string
+		lineageTag: 83600753-cfa1-4d39-8d4f-9f954f050451
+		summarizeBy: none
+		sourceColumn: Nombre_Vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Contacto
+		dataType: string
+		lineageTag: 0eefd289-12b9-4abf-82b2-5a692c194fb7
+		summarizeBy: none
+		sourceColumn: Id_Contacto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comision_Venta
+		dataType: double
+		lineageTag: 158933da-3141-4b96-98a4-05db776d9354
+		summarizeBy: sum
+		sourceColumn: Comision_Venta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Comision_Cobranza
+		dataType: double
+		lineageTag: 39f941b5-e660-4490-8c75-608f4f540a77
+		summarizeBy: sum
+		sourceColumn: Comision_Cobranza
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Legajo
+		dataType: string
+		lineageTag: ae62c342-7787-4895-9eb7-066868986ad1
+		summarizeBy: none
+		sourceColumn: Legajo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha_Alta
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 702fd32f-eda5-4919-a008-c617fd7eed6f
+		summarizeBy: none
+		sourceColumn: Fecha_Alta
+
+		variation Variación
+			isDefault
+			relationship: eac36689-b0ba-4561-908a-e5cfe8064434
+			defaultHierarchy: LocalDateTable_93c417a6-a0f9-46ae-bc2b-ea4a7cb8e6ab.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Estado
+		dataType: string
+		lineageTag: 2e81f539-6cb1-4a76-bbab-1d58798c4bef
+		summarizeBy: none
+		sourceColumn: Id_Estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha_Estado
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 18f95d4f-9119-49cc-9e68-b0c4a3c498e7
+		summarizeBy: none
+		sourceColumn: Fecha_Estado
+
+		variation Variación
+			isDefault
+			relationship: ac2f45f4-2a9e-4141-9734-2ceb3407413a
+			defaultHierarchy: LocalDateTable_7dc489eb-7b2c-4b0f-b6ca-dc4328656cc1.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_EstadoMotivo
+		dataType: string
+		lineageTag: 8f14ec43-5249-4213-9607-fc169b8f7192
+		summarizeBy: none
+		sourceColumn: Id_EstadoMotivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Usuario
+		dataType: string
+		lineageTag: d7694528-bd8a-4841-a1a6-1b4df3a8d4a5
+		summarizeBy: none
+		sourceColumn: Id_Usuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comisionable
+		dataType: int64
+		formatString: 0
+		lineageTag: f5a07ab7-e6b5-45b2-b7ea-2b7adf9b1c99
+		summarizeBy: sum
+		sourceColumn: Comisionable
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUIL
+		dataType: string
+		lineageTag: f3497c54-292c-4db4-80b3-d854832df9db
+		summarizeBy: none
+		sourceColumn: CUIL
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_ZonaVendedor
+		dataType: int64
+		formatString: 0
+		lineageTag: 687bfd29-afee-4458-b5be-958f1cfa84a6
+		summarizeBy: sum
+		sourceColumn: Id_ZonaVendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_GrupoVendedor
+		dataType: int64
+		formatString: 0
+		lineageTag: 41f118d0-9b50-43a9-8a53-fd935c54b275
+		summarizeBy: sum
+		sourceColumn: Id_GrupoVendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Porcentaje_Flete
+		dataType: double
+		lineageTag: 808f0980-c566-43ba-9dce-a1ba3cf8066d
+		summarizeBy: sum
+		sourceColumn: Porcentaje_Flete
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Id_Region
+		dataType: int64
+		formatString: 0
+		lineageTag: 72bb7fa6-5aff-4eaf-8111-d1284cfcc6ee
+		summarizeBy: sum
+		sourceColumn: Id_Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column HabilitaDescuentos
+		dataType: int64
+		formatString: 0
+		lineageTag: 56c444a2-e61c-4bdc-8153-d32f6e1492c0
+		summarizeBy: sum
+		sourceColumn: HabilitaDescuentos
+
+		annotation SummarizationSetBy = Automatic
+
+	column HabilitaSinCargo
+		dataType: int64
+		formatString: 0
+		lineageTag: 59efb7d9-9f03-4862-b786-4b2174a321c3
+		summarizeBy: sum
+		sourceColumn: HabilitaSinCargo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Deposito
+		dataType: int64
+		formatString: 0
+		lineageTag: 2b6dcbd8-909a-42f5-a850-3cc4cc9bbc40
+		summarizeBy: sum
+		sourceColumn: Id_Deposito
+
+		annotation SummarizationSetBy = Automatic
+
+	column HabilitadoWeb
+		dataType: int64
+		formatString: 0
+		lineageTag: c516d649-1881-4053-8707-14da533699f1
+		summarizeBy: sum
+		sourceColumn: HabilitadoWeb
+
+		annotation SummarizationSetBy = Automatic
+
+	column LimitePorcDto
+		dataType: double
+		lineageTag: 5c42652f-1469-401a-85ff-65d8696ee785
+		summarizeBy: sum
+		sourceColumn: LimitePorcDto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Vendedores = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Databases("200.89.174.198,25015"),
+				    DISTRIB = Origen{[Name="DISTRIB"]}[Data],
+				    dbo_basvendedores = DISTRIB{[Schema="dbo",Item="basvendedores"]}[Data]
+				in
+				    dbo_basvendedores
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

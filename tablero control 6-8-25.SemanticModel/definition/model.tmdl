@@ -1,0 +1,80 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-AR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["visCpbtes Suc 1","visCpbtesFondos Suc 1","visCpbtesItems Suc 1","Clientes Suc 1","Productos Suc 1","Grupos Suc 1","Repartidores","Vendedores","visCpbtes Depo","visCpbtesFondos Depo","visCpbtesItems Depo","Clientes Depo","visCpbtes Suc 2","visCpbtesFondos Suc 2","visCpbtesItems Suc 2","Clientes Suc 2","visSaldosClientesSuc1","visSaldosClientesDepo","visSaldosClientesSuc2","venSubGruposEstadisticos"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.145.1602.0 (25.07)+10647c9fa319b5e39936cdb21328038c371d1fe4
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'visCpbtes Suc 1'
+ref table DateTableTemplate_296ec995-9b16-44ef-8035-e53276c622db
+ref table 'visCpbtesFondos Suc 1'
+ref table LocalDateTable_aabbb599-23d8-447a-883a-581d9250c0f1
+ref table LocalDateTable_d8af18df-5d68-4883-a3ee-3969600c36b0
+ref table 'visCpbtesItems Suc 1'
+ref table LocalDateTable_9c2ebfb5-202d-4893-809a-f73c32e0003a
+ref table 'Clientes Suc 1'
+ref table LocalDateTable_5ad0fe00-1808-4b04-8e6a-47de55ef43a3
+ref table LocalDateTable_f2e8abad-7b37-41f6-bcef-798fbb6103cc
+ref table LocalDateTable_c4b95a97-69a5-41fa-a89c-1e5a3e9faa64
+ref table LocalDateTable_67464bd2-d9d4-42cf-96b3-6bca3d241df7
+ref table LocalDateTable_bb04cb87-4b15-4357-a7f3-c64f0add2498
+ref table LocalDateTable_c5da9751-55d7-46e9-a0c9-a3cfa328752b
+ref table LocalDateTable_3f8c28a3-f67a-4551-ab1d-de36e7860eb5
+ref table 'Productos Suc 1'
+ref table LocalDateTable_eca8ca9d-7522-4c56-bd93-1b9969d5eeb0
+ref table LocalDateTable_1195b8ee-5f74-4ecc-9489-b89c0c2da17b
+ref table LocalDateTable_13bfc289-c101-4e54-a78d-2ceaa46638f0
+ref table 'Grupos Suc 1'
+ref table Repartidores
+ref table Vendedores
+ref table LocalDateTable_93c417a6-a0f9-46ae-bc2b-ea4a7cb8e6ab
+ref table LocalDateTable_7dc489eb-7b2c-4b0f-b6ca-dc4328656cc1
+ref table 'visCpbtes Depo'
+ref table 'visCpbtesFondos Depo'
+ref table LocalDateTable_06730cc0-00df-4e73-bc61-f08a72bf7de5
+ref table LocalDateTable_a9fccac2-4d1b-43ad-bc5c-d9e0eccad910
+ref table 'visCpbtesItems Depo'
+ref table LocalDateTable_4bb5f650-a38d-4c2a-961c-d17493b76a31
+ref table 'Clientes Depo'
+ref table LocalDateTable_e419af6b-200d-4fd0-ba2b-9bcf26b9a5ea
+ref table LocalDateTable_c6722bba-587f-47d5-9985-dc59a449b4c5
+ref table LocalDateTable_5bd784d2-b5db-49ab-9086-19324d44a84c
+ref table LocalDateTable_9a0d6d99-abdf-45c8-82d3-914d29775ece
+ref table LocalDateTable_5ded4b00-8857-48f9-a27e-9f6ccc97c4fb
+ref table LocalDateTable_30481c52-48fe-44b3-984d-3fd96fff74cd
+ref table LocalDateTable_3c23636b-b1ea-4f1f-8050-4a3877633a47
+ref table 'visCpbtes Suc 2'
+ref table 'visCpbtesFondos Suc 2'
+ref table LocalDateTable_49115580-05f0-4ca8-a947-8f996727c192
+ref table LocalDateTable_1ef3999d-25ee-4e84-b4fd-b691d0e2efcf
+ref table 'visCpbtesItems Suc 2'
+ref table LocalDateTable_e4546ac5-4439-4863-b171-b5b907aea833
+ref table 'Clientes Suc 2'
+ref table LocalDateTable_97f7569a-d87e-46db-bd10-12af7569a18c
+ref table LocalDateTable_daeaf3bc-6849-4b55-89e0-8ed2b27646e2
+ref table LocalDateTable_cff992df-9dd7-4c89-95ca-7e87d11fdd4b
+ref table LocalDateTable_d96fdc79-50d7-40c2-9374-e2d62a9afee4
+ref table LocalDateTable_83dddcb8-095f-4c05-9e02-7b2fced0a549
+ref table LocalDateTable_928c63ab-1f9a-42d3-9f4b-2cf0d68de63b
+ref table LocalDateTable_c99adfc7-5fcf-4832-845b-a2c2981b1b5f
+ref table Calendario
+ref table LocalDateTable_6c0cf0a5-5ed4-46d5-971a-691adcbe1df8
+ref table visSaldosClientesSuc1
+ref table LocalDateTable_d9729c67-8802-4bd3-8566-a9e4b642538b
+ref table visSaldosClientesDepo
+ref table LocalDateTable_a15bbbb5-a866-448b-a6ed-8e70a30ed87b
+ref table visSaldosClientesSuc2
+ref table LocalDateTable_122a206f-5d1c-45a6-8b81-f308899925e9
+ref table venSubGruposEstadisticos
+
+ref cultureInfo es-ES
+

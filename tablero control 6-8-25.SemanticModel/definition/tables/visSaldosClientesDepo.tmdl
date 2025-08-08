@@ -1,0 +1,79 @@
+table visSaldosClientesDepo
+	lineageTag: 5a3b4276-9d4d-4323-81e1-75272e14e68c
+
+	column Id_Contacto
+		dataType: string
+		lineageTag: 409d4e5d-bc2f-498a-b966-811534ad0d79
+		summarizeBy: none
+		sourceColumn: Id_Contacto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Comprobante
+		dataType: int64
+		formatString: 0
+		lineageTag: 47da781c-91a9-4c94-892e-5e63d64d288a
+		summarizeBy: none
+		sourceColumn: Id_Comprobante
+
+		annotation SummarizationSetBy = Automatic
+
+	column Importe_Debe
+		dataType: double
+		lineageTag: a5dae65b-147e-4de0-b39b-e25e00489eb5
+		summarizeBy: sum
+		sourceColumn: Importe_Debe
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Saldo
+		dataType: double
+		formatString: #,0
+		lineageTag: e213cc0a-8db8-4e53-b50f-fd9911d6adb1
+		summarizeBy: sum
+		sourceColumn: Saldo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column Fecha_Comprobante
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fe5ba9aa-e741-4d3b-9ce9-b3e785afe982
+		summarizeBy: none
+		sourceColumn: Fecha_Comprobante
+
+		variation Variación
+			isDefault
+			relationship: 6415f7d2-6b09-4d58-bfd5-76e164306e74
+			defaultHierarchy: LocalDateTable_a15bbbb5-a866-448b-a6ed-8e70a30ed87b.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_CtaCte
+		dataType: int64
+		formatString: 0
+		lineageTag: a4238ae4-d439-45fd-88e3-b4b7951fdba4
+		summarizeBy: sum
+		sourceColumn: Id_CtaCte
+
+		annotation SummarizationSetBy = Automatic
+
+	partition visSaldosClientesDepo = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Databases("200.89.174.198,25015"),
+				    DISTRIB_DEPO = Origen{[Name="DISTRIB_DEPO"]}[Data],
+				    dbo_visSaldosClientes = DISTRIB_DEPO{[Schema="dbo",Item="visSaldosClientes"]}[Data],
+				    #"Filas ordenadas" = Table.Sort(dbo_visSaldosClientes,{{"Id_Contacto", Order.Ascending}})
+				in
+				    #"Filas ordenadas"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

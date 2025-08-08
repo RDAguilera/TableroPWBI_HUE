@@ -1,0 +1,76 @@
+table 'Grupos Suc 1'
+	lineageTag: 9d0184e3-9151-46dc-8ebf-419612b7d30c
+
+	column Id_Empresa
+		dataType: string
+		lineageTag: ae345d45-d026-4298-afbf-352f76a4de47
+		summarizeBy: none
+		sourceColumn: Id_Empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_GrupoEstadistico1
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c9606e2-b649-4802-b5d7-57fd0da9954d
+		summarizeBy: none
+		sourceColumn: Id_GrupoEstadistico1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nombre_GrupoEstadistico1
+		dataType: string
+		lineageTag: 9730f7ce-7a2f-41eb-8565-64c91a039132
+		summarizeBy: none
+		sourceColumn: Nombre_GrupoEstadistico1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Abreviatura
+		dataType: string
+		lineageTag: 79fbe212-cc1e-407e-8153-75921508de1d
+		summarizeBy: none
+		sourceColumn: Abreviatura
+
+		annotation SummarizationSetBy = Automatic
+
+	column LinkImagen
+		dataType: string
+		lineageTag: 373e6014-03cd-4cb7-897b-499ea88be020
+		summarizeBy: none
+		sourceColumn: LinkImagen
+
+		annotation SummarizationSetBy = Automatic
+
+	column PublicaWeb
+		dataType: int64
+		formatString: 0
+		lineageTag: c76723d1-4b25-4433-844c-d87218e3504b
+		summarizeBy: none
+		sourceColumn: PublicaWeb
+
+		annotation SummarizationSetBy = Automatic
+
+	column Orden
+		dataType: int64
+		formatString: 0
+		lineageTag: b840b908-554e-4720-a07c-61f1f8b611b9
+		summarizeBy: none
+		sourceColumn: Orden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Grupos Suc 1' = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Databases("200.89.174.198,25015"),
+				    DISTRIB = Origen{[Name="DISTRIB"]}[Data],
+				    dbo_vengruposestadisticos1 = DISTRIB{[Schema="dbo",Item="vengruposestadisticos1"]}[Data]
+				in
+				    dbo_vengruposestadisticos1
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+
